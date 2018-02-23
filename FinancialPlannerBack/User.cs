@@ -5,16 +5,14 @@ namespace FinancialPlannerBack
     public class User
     {
         public string Name { get; set; }
-        public Credentials Credentials { get; private set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
 
         public User(string name, string username, string password)
         {
             Name = name;
-            Credentials = new Credentials
-            {
-                Username = username,
-                Password = password
-            };
+            Username = username;
+            Password = password;
         }
 
     }
