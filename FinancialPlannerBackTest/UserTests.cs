@@ -52,6 +52,14 @@ namespace FinancialPlannerBackTest
             Assert.AreEqual(newName, user.Name);
         }
 
+        [TestMethod]
+        public void CanStoreUser()
+        {
+            var user = CreateUser();
+            var storageManager = new StorageManager();
+            storageManager.StoreUser(user);
+        }
+
         private static User CreateUser()
         {
             return new User(Name, Username, Password);
